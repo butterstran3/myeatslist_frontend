@@ -88,6 +88,7 @@ a {
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
+
     .modal_btn {
         background: black;
         color: white;
@@ -120,6 +121,8 @@ a {
         justify-content: space-between;
         padding-top: 1rem;
         width: 100%;
+        position: fixed;
+        top: 0;
     }
     
     .empty_container {
@@ -174,6 +177,8 @@ a {
         height: 7.2%;
         justify-content: space-between;
         padding-top: 0.5rem;
+        position: fixed;
+        top: 0;
     }
     
     .empty_container {

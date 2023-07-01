@@ -58,7 +58,7 @@ const Nav = () => {
                         <NavLink className="nav_content" to="/"  onClick={() => setMobileNav(!mobileNav)}>Home</NavLink>  
                     </div>
                     <div className='modal-nav_content'>
-                        <NavLink className="nav_content" to="/form"  onClick={() => setMobileNav(!mobileNav)}>Form</NavLink>  
+                        <NavLink className="nav_content" to="/review"  onClick={() => setMobileNav(!mobileNav)}>Review</NavLink>  
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@ const Nav = () => {
                 </div>
                 <div className="nav_contents">
                     <NavLink className="nav_content" to="/">Home</NavLink>
-                    <NavLink className="nav_content" to="/form">Form</NavLink>
+                    <NavLink className="nav_content" to="/review">Review</NavLink>
                 </div>
             </nav>
         )
