@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./form.css";
 
 const Form = () => {
@@ -9,6 +9,7 @@ const Form = () => {
     const [food, setFood] = useState(0);
     const [price, setPrice] = useState(0);
     const [vibe, setVibe] = useState(0);
+    let navigate = useNavigate(); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const Form = () => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(restaurant)
         }).then(() => {
-            redirect("/");
+            navigate("/");
         });
     }
 

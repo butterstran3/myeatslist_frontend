@@ -3,7 +3,7 @@ import './nav.css';
 import { NavLink } from 'react-router-dom'
 import { AiOutlineMenu } from 'react-icons/ai';
 import {RxCross1} from 'react-icons/rx';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 const Nav = () => {
 
