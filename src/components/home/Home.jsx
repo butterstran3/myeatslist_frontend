@@ -4,14 +4,12 @@ import { FaTrash } from 'react-icons/fa';
 
 const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
-    const [deleted, setDeleted] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:8080/restaurant/getAll")
             .then((res) => res.json())
             .then((result) => {
                 setRestaurants(result);
-                console.log(result);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
@@ -22,23 +20,13 @@ const Home = () => {
         fetch(`http://localhost:8080/restaurant/delete/${id}`, {
             method: "DELETE"
         }).then(() => {
-            setDeleted(true);
-        });
-    }
-
-    useEffect(() => {
-        if (deleted) {
             fetch("http://localhost:8080/restaurant/getAll")
                 .then((res) => res.json())
                 .then((result) => {
                     setRestaurants(result);
-                    setDeleted(false);
                 })
-                .catch((error) => {
-                    console.error("Error fetching data:", error);
-                });
-        }
-    }, [deleted]);
+        });
+    }
 
     return (
         <div className="home_container">
